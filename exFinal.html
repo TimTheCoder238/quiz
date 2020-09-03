@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style class="">
+        .container {
+            margin-top: 25px;
+        }
+
+        .settopmargemedium {
+            margin-top: 25px;
+        }
+
+        h1 {
+            margin-top: 35px;
+        }
+
+        #username {
+            margin-top: 35px;
+        }
+
+        #answer {
+            margin-top: 35px;
+        }
+
+        .columns {
+            margin-top: 8px;
+        }
+
+        #lastContainer {
+            margin-bottom: 30px;
+        }
+
+        .modalbackground {
+            background-color: white;
+            border-radius: 5px;
+            text-align: enter;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="columns">
+        <div class="column">
+            <p class="is-size-3 has-text-grey has-text-centered" id="username"></p>
+        </div>
+        <div class="column">
+            <h1 class="is-size-1 has-text-weight-bold has-text-link has-text-centered">Questions</h1>
+            <p id="result1" class="is-size-1 has-text-info has-text-centered"></p>
+        </div>
+        <div class="column">
+            <p class="is-size-3 has-text-grey has-text-centered" id="answer"></p>
+            <p class="is-size-3 has-text-success has-text-centered" id="timer"></p>
+        </div>
+    </div>
+
+    <hr>
+    <hr>
+        <div class="container has-text-centered" id="container1">
+
+        </div>
+
+        <div class="container has-text-centered" id="container2">
+
+        </div>
+
+        <div class="container has-text-centered" id="container3">
+
+        </div>
+
+        <div class="container has-text-centered" id="container4">
+
+        </div>
+
+        <div class="container has-text-centered" id="container5">
+
+        </div>
+
+        <div class="container has-text-centered" id="container6">
+
+        </div>
+
+        <div class="container has-text-centered" id="container7">
+
+        </div>
+
+        <div class="container has-text-centered" id="container8">
+
+        </div>
+
+        <div class="container has-text-centered" id="container9">
+
+        </div>
+
+        <div class="container has-text-centered" id="container10">
+
+        </div>
+
+    <div class="container has-text-centered">
+
+        <p>
+            <a class="button is-primary is-large modal-button" data-target="modal-bis" onclick="updateModal()">Submit
+                answers</a>
+        </p>
+
+        <div id="modal-bis" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+
+                <div class="column modalbackground" id="result">
+                    <!-- //Here I include datas from submit.js -->
+                </div>
+
+            </div>
+            <button class="modal-close is-large" aria-label="close" onclick="removeModal()"></button>
+        </div>
+    </div>
+
+    <div class="container has-text-centered">
+
+
+    </div>
+
+    <div class="container has-text-centered">
+
+        <div class="columns" id="lastContainer">
+            <!-- Show result on form bottom -->
+            <div class="column">
+                <p id="result2" class="is-size-1 has-text-info has-text-centered"></p>
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Questions</strong> by Tim Costa.
+                </p>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript" src=submit.js></script>
+        <script type="text/javascript" src=exFinal.js></script>
+        <script type="text/javascript" src=timer.js></script>
+
+        <script>
+            function updateModal() {
+                submit();
+                document.getElementById("modal-bis").className = "modal has-text-centered is-active is-clipped";
+            }
+
+            function removeModal() {
+                document.getElementById("modal-bis").className = "modal";
+            }
+        </script>
+
+</body>
+
+</html>
